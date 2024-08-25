@@ -1,0 +1,256 @@
+home page:
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alzheimer Detection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <a href="#" class="logo">Alzheimer Detection</a>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#loginpage">Login</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <h1>Welcome to Alzheimer Detection</h1>
+                <p>Helping you recognize the signs early</p>
+                <a href="loginpage.html" class="btn-primary">Get Started</a>
+            </div>
+        </section>
+    </header>
+
+    <main>
+        <section id="about" class="info-section">
+            <div class="container">
+                <h2>About Us</h2>
+                <p>We provide tools and resources to help detect early signs of Alzheimer’s disease. Our platform offers assessments, information, and support to ensure timely intervention and management.</p>
+            </div>
+        </section>
+
+        <section id="services" class="info-section">
+            <div class="container">
+                <h2>Our Services</h2>
+                <div class="services">
+                    <div class="service">
+                        <h3>Assessment Tools</h3>
+                        <p>Interactive tools to assess cognitive function and memory.</p>
+                    </div>
+                    <div class="service">
+                        <h3>Educational Resources</h3>
+                        <p>Comprehensive information about Alzheimer’s and caregiving tips.</p>
+                    </div>
+                    <div class="service">
+                        <h3>Support Network</h3>
+                        <p>Access to support groups and professional consultations.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Alzheimer Detection. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
+login page
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Alzheimer Detection</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center align-items-center vh-100">
+            <div class="col-md-6 col-lg-4">
+                <div class="card shadow">
+                    <div class="card-body">
+                        <h3 class="card-title text-center mb-4">Login</h3>
+                        <form id="loginForm">
+                            <div class="form-group">
+                                <label for="username">Username:</label>
+                                <input type="text" id="username" class="form-control" placeholder="Enter username" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="password">Password:</label>
+                                <input type="password" id="password" class="form-control" placeholder="Enter password" required>
+                            </div>
+                            <button type="button" class="btn btn-primary btn-block" onclick="login()">Login</button>
+                            <div id="error-message" class="text-danger mt-3"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
+css
+
+/* Global Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+    background-image:white;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Home Page Styles */
+header {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    background: url('home.jpg') no-repeat center center/cover;
+    color: #fff;
+}
+
+nav {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 1rem 0;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 60px); /* Adjust based on nav height */
+    text-align: center;
+}
+
+.hero-content {
+    max-width: 600px;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #e5960e;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+.btn-primary:hover {
+    background-color: #11ac3d;
+}
+
+.info-section {
+    padding: 60px 0;
+    background: #a8c202;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.services {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.service {
+    flex: 1;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.loginpage-body {
+    background-image: url('logyinbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+footer {
+    background: #343a40;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Login Page Styles */
+.loginpage-body {
+    background-image: url('logyinbackground.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.card {
+    border-radius: 8px;
+}
+
+.card-body {
+    padding: 2rem;
+}
+
+.btn {
+    font-size: 16px;
+}
+
+#error-message {
+    display: none;
+}
+
+
+
